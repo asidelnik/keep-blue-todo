@@ -1,7 +1,21 @@
-<form class="example-form" style="width: 500px; border: 1px
-solid black;">
+<form class="example-form" style="width: 500px; border: 1px solid black;">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Take a note...">
+        <input #newTask matInput placeholder="Take a note..." (keyup.enter)="addTask(newTask.value)"
+            (blur)="addTask(newTask.value); newTask.value='' ">
     </mat-form-field>
-    <button mat-raised-button color="primary">Add</button>
+    <button mat-raised-button (click)="addTask(newTask.value)" color="primary">Add</button>
 </form>
+
+
+
+<!-- <h2>My Heroes</h2>
+
+    <div>
+        <label>Hero name:
+            <input #heroName />
+        </label>
+        (click) passes input value to add() and then clears the input
+        <button (click)="add(heroName.value); heroName.value=''">
+            add
+        </button>
+    </div> -->
