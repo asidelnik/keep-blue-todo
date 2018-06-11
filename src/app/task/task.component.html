@@ -1,14 +1,6 @@
-<!-- <li>
-    <a>
-        <span class="badge">{{task.title}}</span> {{hero.name}}
-    </a>
-    <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
-</li>
- -->
-
-<mat-list-item fxLayoutGap="20px">
+<mat-list-item fxLayoutGap="20px" data-id="{{task._id}}">
     <mat-checkbox style="margin-right:15px;"></mat-checkbox>
     {{ task.title }}
     <span class="spacer"></span>
-    <button mat-raised-button color="warn" class="delete-btn_" style="margin-left:200px;">Delete</button>
+    <button mat-raised-button color="warn" (click)="deleteTask(task._id)" class="delete-btn_">Delete</button>
 </mat-list-item>

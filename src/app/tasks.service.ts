@@ -16,14 +16,15 @@ export class TasksService {
     }
 
     addTask(newTask: Task) {
-        // console.log("service");
-        // console.log(newTask);
         this.tasks.push(newTask);
+    }
+    
+    findTaskIndex(taskId) {
+        return this.tasks.findIndex(task => task._id == taskId);
     }
 
     deleteTask(taskId) {
-        
+        let taskIndex = this.findTaskIndex(taskId);
+        this.tasks.splice(taskIndex, 1);
     }
-
-
 }
