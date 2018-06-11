@@ -1,14 +1,56 @@
-<mat-selection-list #shoes>
+<!--  -->
+<!-- List -->
+
+<mat-list style="width: 500px; border: 1px
+solid black;">
+    <mat-list-item fxLayoutGap="20px">
+        <mat-checkbox style="margin-right:15px;"></mat-checkbox>
+        Pepper
+        <span class="spacer"></span>
+
+        <button mat-raised-button color="warn"
+            class="delete-btn_" style="margin-left:15px;">Delete</button>
+
+    </mat-list-item>
+    <mat-list-item> Salt </mat-list-item>
+    <mat-list-item> Paprika </mat-list-item>
+</mat-list>
+
+
+
+<!-- <mat-selection-list #shoes class="docs-example-viewer-body">
     <mat-list-option *ngFor="let shoe of typesOfShoes">
-        {{shoe}}
-        <mat-icon matListIcon></mat-icon>
+        <p class="todo-title_">{{shoe}}</p>
+        <button mat-raised-button color="warn"
+            class="delete-btn_">Delete</button>
     </mat-list-option>
-</mat-selection-list>
+</mat-selection-list> -->
 
 
-<!-- 
-<hr>
 
+
+<!-- <mat-list>
+    <mat-list-item *ngFor="let folder of folders">
+        <h3 matLine> {{folder.name}} </h3>
+        <p matLine> {{folder.updated}} </p>
+        <p matLine class="demo-2"> {{folder.name}} </p>
+    </mat-list-item>
+</mat-list>
+
+
+<mat-list>
+    <mat-list-item *ngFor="let folder of folders">
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine> {{folder.name}} </h3>
+        <p matLine>
+            <span> {{folder.updated}}</span>
+            <span class="demo-2"> -- {{folder.name}}</span>
+        </p>
+    </mat-list-item>
+</mat-list> -->
+
+
+<!--
 <mat-list>
     <h3 matSubheader>Folders</h3>
     <mat-list-item *ngFor="let folder of folders">
