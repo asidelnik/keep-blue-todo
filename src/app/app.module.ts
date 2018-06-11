@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -16,6 +17,7 @@ import { CompletedComponent } from './completed/completed.component';
 import { TaskComponent } from './task/task.component';
 import { TasksAllComponent } from './tasks-all/tasks-all.component';
 import { MakeTaskComponent } from './make-task/make-task.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,8 @@ import { MakeTaskComponent } from './make-task/make-task.component';
         CompletedComponent,
         TaskComponent,
         TasksAllComponent,
-        MakeTaskComponent
+        MakeTaskComponent,
+        AddTaskComponent
     ],
     imports: [
         BrowserModule,
@@ -33,7 +36,8 @@ import { MakeTaskComponent } from './make-task/make-task.component';
         MatButtonModule,
         MatIconModule,
         MatToolbarModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatInputModule
     ],
     providers: [],
     bootstrap: [AppComponent]

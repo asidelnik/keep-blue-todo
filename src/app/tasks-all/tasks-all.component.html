@@ -1,20 +1,19 @@
 <!--  -->
 <!-- List -->
 
-<mat-list style="width: 500px; border: 1px
-solid black;">
-    <mat-list-item fxLayoutGap="20px">
-        <mat-checkbox style="margin-right:15px;"></mat-checkbox>
-        Pepper
-        <span class="spacer"></span>
-
-        <button mat-raised-button color="warn"
-            class="delete-btn_" style="margin-left:15px;">Delete</button>
-
-    </mat-list-item>
-    <mat-list-item> Salt </mat-list-item>
-    <mat-list-item> Paprika </mat-list-item>
+<mat-list style="width: 500px; border: 1px solid black;">
+    <app-task *ngFor="let task of tasks; let i = index" [task]="task"></app-task>
 </mat-list>
+
+
+
+
+<!-- <mat-list-item fxLayoutGap="20px">
+        <mat-checkbox style="margin-right:15px;"></mat-checkbox>
+        {{ task.title }}Finish homework
+        <span class="spacer"></span>
+        <button mat-raised-button color="warn" class="delete-btn_" style="margin-left:200px;">Delete</button>
+    </mat-list-item> -->
 
 
 

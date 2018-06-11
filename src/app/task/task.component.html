@@ -1,3 +1,6 @@
-<p>
-  task works!
-</p>
+<mat-list-item fxLayoutGap="20px">
+    <mat-checkbox style="margin-right:15px;"></mat-checkbox>
+    {{ task.title }}
+    <span class="spacer"></span>
+    <button mat-raised-button color="warn" class="delete-btn_" style="margin-left:200px;">Delete</button>
+</mat-list-item>
