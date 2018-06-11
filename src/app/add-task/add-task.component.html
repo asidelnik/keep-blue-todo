@@ -1,9 +1,9 @@
 <form class="example-form" style="width: 500px; border: 1px solid black;">
     <mat-form-field class="example-full-width">
-        <input #newTask matInput placeholder="Take a note..." (keyup.enter)="addTask(newTask.value)"
-            (blur)="addTask(newTask.value); newTask.value='' ">
+        <input matInput #taskTitle [(ngModel)]="task.title" placeholder="Take a note..." name="taskTitle" (keyup.enter)="addTask()">
+         <!-- (keyup.enter)="addTask()" (blur)="addTask()" -->
     </mat-form-field>
-    <button mat-raised-button (click)="addTask(newTask.value)" color="primary">Add</button>
+    <!-- <button mat-raised-button (click)="addTask()" color="primary">Add</button> -->
 </form>
 
 

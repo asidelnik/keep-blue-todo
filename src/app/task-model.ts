@@ -2,10 +2,14 @@
 
 export class Task {
     title: string;
-    // description: string;
+    _id: number;
+}
+
+
+
+// description: string;
     // owner: User;
     // creationDate: Date;
     // modifiedDate: Date;
     // pinned: boolean;
     // collaborators: User[];
-}

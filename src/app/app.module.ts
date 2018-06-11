@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +38,8 @@ import { AddTaskComponent } from './add-task/add-task.component';
         MatIconModule,
         MatToolbarModule,
         MatCheckboxModule,
-        MatInputModule
+        MatInputModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

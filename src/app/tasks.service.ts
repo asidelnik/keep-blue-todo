@@ -7,7 +7,7 @@ import { Task } from './task-model';
     providedIn: 'root'
 })
 export class TasksService {
-    tasks: Task[] = [{ title: "Purchase groceries" }, { title: "Complete homework" }, { title: "Clean the kitchen" }];
+    tasks: Task[] = [{ title: "Purchase groceries", _id: 1 }, { title: "Complete homework", _id: 2 }, { title: "Clean the kitchen", _id: 3 }];
 
     constructor() { }
 
@@ -16,7 +16,13 @@ export class TasksService {
     }
 
     addTask(newTask: Task) {
+        // console.log("service");
+        // console.log(newTask);
         this.tasks.push(newTask);
+    }
+
+    deleteTask(taskId) {
+        
     }
 
 

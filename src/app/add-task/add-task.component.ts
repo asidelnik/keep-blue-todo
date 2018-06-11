@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TasksService } from '../tasks.service';
 import { Task } from '../task-model';
 
 
@@ -10,20 +11,26 @@ import { Task } from '../task-model';
 export class AddTaskComponent implements OnInit {
 
     // @Input() movie: Task = new Task();
-    movie: Task = new Task();
+    task: Task = new Task();
     // @Output() open: EventEmitter<any> = new EventEmitter();
-    @Output() addTaskEmitter: EventEmitter<Task> = new EventEmitter();
+    // @Output() addTaskEmitter: EventEmitter<Task> = new EventEmitter();
 
 
-    constructor() { }
+    constructor(private tasksService: TasksService) { }
 
     ngOnInit() {
     }
 
-    addTask(newTask: Task) {
-        if (newTask) {
-            this.addTaskEmitter.emit(newTask);
-        }
+    addTask() {
+        this.tasksService.addTask(this.task);
+        this.task = new Task();
     }
+
+    // addTask(newTask: Task) {
+
+    //     if (newTask) {
+    //         this.addTaskEmitter.emit(newTask);
+    //     }
+    // }
 
 }
