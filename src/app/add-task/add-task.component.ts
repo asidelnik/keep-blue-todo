@@ -10,11 +10,7 @@ import { Task } from '../task-model';
 })
 export class AddTaskComponent implements OnInit {
 
-    // @Input() movie: Task = new Task();
     task: Task = new Task();
-    // @Output() open: EventEmitter<any> = new EventEmitter();
-    // @Output() addTaskEmitter: EventEmitter<Task> = new EventEmitter();
-
 
     constructor(private tasksService: TasksService) { }
 
@@ -25,12 +21,5 @@ export class AddTaskComponent implements OnInit {
         this.tasksService.addTask(this.task);
         this.task = new Task();
     }
-
-    // addTask(newTask: Task) {
-
-    //     if (newTask) {
-    //         this.addTaskEmitter.emit(newTask);
-    //     }
-    // }
 
 }
